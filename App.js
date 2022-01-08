@@ -50,7 +50,11 @@ export default function App() {
             <Stack.Screen name="Home">
               {(props) => <HomeScreen {...props} extraData={user} />}
             </Stack.Screen>
-            <Stack.Screen name="Review" component={ReviewScreen} />
+            <Stack.Screen
+              name="Review"
+              component={ReviewScreen}
+              options={{ headerShown: false }}
+            />
             <Stack.Screen name="Details" component={ToiletReview} />
           </>
         ) : (

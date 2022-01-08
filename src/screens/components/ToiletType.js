@@ -45,7 +45,8 @@ const styles = StyleSheet.create({
   horizontalList: {
     flexDirection: 'row',
     padding: 20,
-    justifyContent: 'space-between'
+    width: '100%',
+    justifyContent: 'space-around'
   },
   toiletTypeIcons: {
     width: 30,

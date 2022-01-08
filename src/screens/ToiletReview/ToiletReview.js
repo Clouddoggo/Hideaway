@@ -1,25 +1,20 @@
-import { signOut } from 'firebase/auth';
 import React from 'react';
-import { TouchableOpacity, Text, View } from 'react-native';
-import { auth } from '../../firebase/config';
+import { TouchableOpacity, Text, View, ImageBackground } from 'react-native';
+import utown from '../../../assets/utown.jpg';
 import styles from './styles';
 
 export default function ToiletReview({ navigation }) {
-  const onLogout = () => {
-    navigation.navigate('Login');
-    return signOut(auth);
-  };
-
   const onAddReview = () => {
     navigation.navigate('Review');
   };
 
   return (
     <View style={styles.container}>
-      <Text>Home Screen</Text>
-      <TouchableOpacity style={styles.button} onPress={async () => onLogout()}>
-        <Text style={styles.buttonTitle}>Logout</Text>
-      </TouchableOpacity>
+      <ImageBackground style={styles.coverImage} source={utown}>
+        <View style={styles.textView}>
+          <Text style={styles.imageText}>UTOWN SRC LEVEL 2</Text>
+        </View>
+      </ImageBackground>
       <TouchableOpacity style={styles.button} onPress={onAddReview}>
         <Text style={styles.buttonTitle}>Add Review</Text>
       </TouchableOpacity>

@@ -2,7 +2,13 @@ import { StyleSheet } from 'react-native';
 
 export default StyleSheet.create({
   container: {
-    alignItems: 'center'
+    backgroundColor: '#fcfcfc',
+    marginVertical: 30,
+    marginHorizontal: 20
+  },
+  contentContainer: {
+    flexGrow: 1,
+    justifyContent: 'center'
   },
   button: {
     height: 47,
@@ -49,5 +55,15 @@ export default StyleSheet.create({
     width: 160,
     marginHorizontal: 20,
     marginVertical: 30
+  },
+  reviewHeader: {
+    fontSize: 20,
+    fontWeight: 'bold'
+  },
+  list: {
+    marginTop: 20,
+    borderTopWidth: 1,
+    borderColor: 'grey',
+    width: '85%'
   }
 });

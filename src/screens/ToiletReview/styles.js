@@ -40,8 +40,8 @@ export default StyleSheet.create({
   },
   buttonView: {
     position: 'absolute',
-    top: 40,
-    left: 25
+    top: 45,
+    left: 30
   },
   buttonStyle: {
     backgroundColor: '#41AAEE',

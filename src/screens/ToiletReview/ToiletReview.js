@@ -50,14 +50,21 @@ export default function ToiletReview({ navigation }) {
       }}
     >
       <ImageBackground style={styles.coverImage} source={src}>
-        <View style={styles.buttonView}>
-          <Icon
-            reverse
-            name="arrow-back-outline"
-            type="ionicon"
-            color="#788eec"
-            onPress={() => navigation.goBack()}
-          />
+        <View
+          style={{
+            backgroundColor: 'rgba(104, 104, 104, 0.4)',
+            width: '100%',
+            height: 81
+          }}
+        >
+          <View style={styles.buttonView}>
+            <Icon
+              name="arrow-back-outline"
+              type="ionicon"
+              color="white"
+              onPress={() => navigation.goBack()}
+            />
+          </View>
         </View>
         <View style={styles.textView}>
           <Text style={styles.imageText}>UTown SRC Level 2</Text>

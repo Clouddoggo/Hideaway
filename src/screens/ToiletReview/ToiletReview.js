@@ -4,14 +4,14 @@ import { TouchableOpacity, Text, View } from 'react-native';
 import { auth } from '../../firebase/config';
 import styles from './styles';
 
-export default function HomeScreen({ navigation }) {
+export default function ToiletReview({ navigation }) {
   const onLogout = () => {
     navigation.navigate('Login');
     return signOut(auth);
   };
 
-  const goToDetails = () => {
-    navigation.navigate('Details');
+  const onAddReview = () => {
+    navigation.navigate('Review');
   };
 
   return (
@@ -20,11 +20,8 @@ export default function HomeScreen({ navigation }) {
       <TouchableOpacity style={styles.button} onPress={async () => onLogout()}>
         <Text style={styles.buttonTitle}>Logout</Text>
       </TouchableOpacity>
-      <TouchableOpacity
-        style={styles.button}
-        onPress={async () => goToDetails()}
-      >
-        <Text style={styles.buttonTitle}>Details</Text>
+      <TouchableOpacity style={styles.button} onPress={onAddReview}>
+        <Text style={styles.buttonTitle}>Add Review</Text>
       </TouchableOpacity>
     </View>
   );

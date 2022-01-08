@@ -2,7 +2,6 @@ import { StyleSheet } from 'react-native';
 
 export default StyleSheet.create({
   container: {
-    backgroundColor: '#fcfcfc',
     marginVertical: 30,
     marginHorizontal: 20
   },
@@ -14,7 +13,6 @@ export default StyleSheet.create({
     height: 47,
     borderRadius: 5,
     backgroundColor: '#788eec',
-
     alignItems: 'center',
     justifyContent: 'center'
   },
@@ -62,8 +60,9 @@ export default StyleSheet.create({
   },
   list: {
     marginTop: 20,
+    marginTop: 20,
     borderTopWidth: 1,
-    borderColor: 'grey',
+    borderColor: 'transparent',
     width: '85%'
   }
 });

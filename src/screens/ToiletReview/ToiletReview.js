@@ -43,7 +43,11 @@ export default function ToiletReview({ navigation }) {
 
   return (
     <ScrollView
-      contentContainerStyle={{ flexGrow: 1, justifyContent: 'center' }}
+      contentContainerStyle={{
+        flexGrow: 1,
+        justifyContent: 'center',
+        alignItems: 'center'
+      }}
     >
       <ImageBackground style={styles.coverImage} source={src}>
         <View style={styles.buttonView}>
@@ -74,22 +78,19 @@ export default function ToiletReview({ navigation }) {
         containerStyle={styles.containerStyle}
         onPress={onAddReview}
       />
-      <View>
-        <Text style={styles.reviewHeader}>{reviewItems.length} Reviews</Text>
-        <View style={styles.list}>
-          {reviewItems.map((l, i) => (
-            <ListItem key={i} bottomDivider>
-              <ListItem.Content>
-                <ListItem.Title style={{ fontWeight: 'bold', fontSize: 18 }}>
-                  {l.user}
-                </ListItem.Title>
-
-                <ListItem.Subtitle>{l.datetime}</ListItem.Subtitle>
-                <Text>{l.description}</Text>
-              </ListItem.Content>
-            </ListItem>
-          ))}
-        </View>
+      <Text style={styles.reviewHeader}>{reviewItems.length} Reviews</Text>
+      <View style={styles.list}>
+        {reviewItems.map((l, i) => (
+          <ListItem key={i} bottomDivider>
+            <ListItem.Content>
+              <ListItem.Title style={{ fontWeight: 'bold', fontSize: 18 }}>
+                {l.user}
+              </ListItem.Title>
+              <ListItem.Subtitle>{l.datetime}</ListItem.Subtitle>
+              <Text style={{ marginTop: 10 }}>{l.description}</Text>
+            </ListItem.Content>
+          </ListItem>
+        ))}
       </View>
     </ScrollView>
   );

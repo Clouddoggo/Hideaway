@@ -27,30 +27,30 @@ export default StyleSheet.create({
     flex: 1,
     marginRight: 5
   },
-  button: {
-    height: 47,
-    borderRadius: 5,
-    backgroundColor: '#788eec',
-    width: 80,
-    alignItems: 'center',
-    justifyContent: 'center'
-  },
-  buttonText: {
-    color: 'white',
-    fontSize: 16
-  },
   listContainer: {
     marginTop: 20,
     padding: 20
   },
-  entityContainer: {
-    marginTop: 16,
-    borderBottomColor: '#cccccc',
-    borderBottomWidth: 1,
-    paddingBottom: 16
-  },
-  entityText: {
+  suggestedHeader: {
     fontSize: 20,
-    color: '#333333'
+    fontWeight: 'bold'
+  },
+  list: {
+    marginTop: 20,
+    marginTop: 20,
+    borderTopWidth: 1,
+    borderColor: 'transparent',
+    width: '85%'
+  },
+  buttonStyle: {
+    backgroundColor: '#41AAEE',
+    borderColor: 'transparent',
+    borderWidth: 0,
+    borderRadius: 10
+  },
+  containerStyle: {
+    width: 160,
+    marginHorizontal: 20,
+    marginVertical: 30
   }
 });

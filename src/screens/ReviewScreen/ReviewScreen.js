@@ -1,10 +1,11 @@
 import React from 'react';
-import { StyleSheet, Text, View, TouchableOpacity, Image } from 'react-native';
+import { Text, View } from 'react-native';
 import { Button } from 'react-native-elements';
 import ToiletType from '../components/ToiletType';
 import Ratings from '../components/Ratings';
 import WaitingTime from '../components/WaitingTime';
 import { Icon } from 'react-native-elements';
+import styles from './styles';
 
 const CloseBtn = ({ onClose }) => {
   return (
@@ -53,48 +54,5 @@ const ReviewScreen = ({ navigation }) => {
     </View>
   );
 };
-
-const styles = StyleSheet.create({
-  wrapper: {
-    padding: 20
-  },
-  container: {
-    alignItems: 'center',
-    padding: 50
-  },
-  headline: {
-    textAlign: 'center',
-    fontWeight: 'bold',
-    fontSize: 25,
-    marginTop: 40
-  },
-  cancelButtonStyle: {
-    backgroundColor: '#ACB4B9',
-    borderColor: 'transparent',
-    borderWidth: 0,
-    borderRadius: 10
-  },
-  buttonStyle: {
-    backgroundColor: '#41AAEE',
-    borderColor: 'transparent',
-    borderWidth: 0,
-    borderRadius: 10
-  },
-  containerStyle: {
-    width: 110,
-    marginHorizontal: 20,
-    marginVertical: 30
-  },
-  buttonGroup: {
-    flexDirection: 'row',
-    justifyContent: 'space-around'
-  },
-  closeBtn: {
-    position: 'absolute',
-    justifyContent: 'center',
-    top: 60,
-    right: 30
-  }
-});
 
 export default ReviewScreen;

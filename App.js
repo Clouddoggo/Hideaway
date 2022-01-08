@@ -55,7 +55,11 @@ export default function App() {
               component={ReviewScreen}
               options={{ headerShown: false }}
             />
-            <Stack.Screen name="Details" component={ToiletReview} />
+            <Stack.Screen
+              name="Details"
+              component={ToiletReview}
+              options={{ headerShown: false }}
+            />
           </>
         ) : (
           <>

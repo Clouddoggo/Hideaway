@@ -2,14 +2,13 @@ import { StyleSheet } from 'react-native';
 
 export default StyleSheet.create({
   container: {
-    flex: 1,
     alignItems: 'center'
   },
   button: {
     height: 47,
     borderRadius: 5,
     backgroundColor: '#788eec',
-    width: 80,
+
     alignItems: 'center',
     justifyContent: 'center'
   },
@@ -19,12 +18,12 @@ export default StyleSheet.create({
   },
   coverImage: {
     width: '100%',
-    height: 200
+    height: 300
   },
   textView: {
     position: 'absolute',
-    justifyContent: 'center',
     alignItems: 'center',
+    justifyContent: 'center',
     top: 0,
     left: 0,
     right: 0,
@@ -35,14 +34,20 @@ export default StyleSheet.create({
     color: 'white',
     fontWeight: 'bold'
   },
-  button: {
-    backgroundColor: '#788eec',
-    marginLeft: 30,
-    marginRight: 30,
-    marginTop: 20,
-    height: 48,
-    borderRadius: 5,
-    alignItems: 'center',
-    justifyContent: 'center'
+  buttonView: {
+    position: 'absolute',
+    top: 40,
+    left: 25
+  },
+  buttonStyle: {
+    backgroundColor: '#41AAEE',
+    borderColor: 'transparent',
+    borderWidth: 0,
+    borderRadius: 10
+  },
+  containerStyle: {
+    width: 160,
+    marginHorizontal: 20,
+    marginVertical: 30
   }
 });

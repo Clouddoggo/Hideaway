@@ -1,30 +1,36 @@
 import React from 'react';
 import { StyleSheet, Text, View, TouchableOpacity, Image } from 'react-native';
+import { Button } from 'react-native-elements';
 import ToiletType from '../components/ToiletType';
 import Ratings from '../components/Ratings';
 import WaitingTime from '../components/WaitingTime';
+import { Icon } from 'react-native-elements';
 
 const CloseBtn = ({ onClose }) => {
   return (
-    <TouchableOpacity onPress={onClose} style={styles.closeBtnContainer}>
-      <Image
-        style={styles.closeBtn}
-        source={require('../../../assets/cross.png')}
-      />
-    </TouchableOpacity>
+    <View style={styles.closeBtn}>
+      <Icon name="x" type="feather" onPress={onClose} />
+    </View>
   );
 };
 
 const FormBtns = ({ onPress }) => {
   return (
     <View style={styles.buttonGroup}>
-      <TouchableOpacity style={styles.button} onPress={onPress}>
-        <Text style={styles.buttonTitle}>Cancel</Text>
-      </TouchableOpacity>
-
-      <TouchableOpacity style={styles.button} onPress={onPress}>
-        <Text style={styles.buttonTitle}>Submit</Text>
-      </TouchableOpacity>
+      <Button
+        title="Cancel"
+        titleStyle={{ fontWeight: '500' }}
+        buttonStyle={styles.cancelButtonStyle}
+        containerStyle={styles.containerStyle}
+        onPress={onPress}
+      />
+      <Button
+        title="Submit"
+        titleStyle={{ fontWeight: '500' }}
+        buttonStyle={styles.buttonStyle}
+        containerStyle={styles.containerStyle}
+        onPress={onPress}
+      />
     </View>
   );
 };
@@ -35,54 +41,59 @@ const ReviewScreen = ({ navigation }) => {
   };
 
   return (
-    <View style={styles.container}>
+    <View styles={styles.wrapper}>
       <CloseBtn onClose={onClose} />
-      <Text style={styles.headline}>How was your visit?</Text>
-      <ToiletType />
-      <Ratings />
-      <WaitingTime />
-      <FormBtns onPress={onClose} />
+      <View style={styles.container}>
+        <Text style={styles.headline}>How was your visit?</Text>
+        <ToiletType />
+        <Ratings />
+        <WaitingTime />
+        <FormBtns onPress={onClose} />
+      </View>
     </View>
   );
 };
 
 const styles = StyleSheet.create({
+  wrapper: {
+    padding: 20
+  },
   container: {
     alignItems: 'center',
-    flex: 1,
     padding: 50
   },
   headline: {
     textAlign: 'center',
     fontWeight: 'bold',
     fontSize: 25,
-    marginTop: 35
+    marginTop: 40
   },
-  button: {
-    backgroundColor: '#788eec',
-    marginLeft: 20,
-    marginRight: 20,
-    marginTop: 20,
-    height: 48,
-    borderRadius: 5,
-    alignItems: 'center',
-    justifyContent: 'center'
+  cancelButtonStyle: {
+    backgroundColor: '#ACB4B9',
+    borderColor: 'transparent',
+    borderWidth: 0,
+    borderRadius: 10
   },
-  buttonTitle: {
-    color: 'white',
-    fontSize: 16,
-    fontWeight: 'bold'
+  buttonStyle: {
+    backgroundColor: '#41AAEE',
+    borderColor: 'transparent',
+    borderWidth: 0,
+    borderRadius: 10
+  },
+  containerStyle: {
+    width: 110,
+    marginHorizontal: 20,
+    marginVertical: 30
   },
   buttonGroup: {
     flexDirection: 'row',
     justifyContent: 'space-around'
   },
-  closeBtnContainer: {
-    alignSelf: 'flex-end'
-  },
   closeBtn: {
-    height: 15,
-    width: 15
+    position: 'absolute',
+    justifyContent: 'center',
+    top: 60,
+    right: 30
   }
 });
 
